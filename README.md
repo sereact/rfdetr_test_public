@@ -19,7 +19,7 @@ tote at the image edge are background.
 ![cardboard bin inside a tote](docs/example_cardboard_bin_inside_tote.jpg)
 ![cardboard bin on its own](docs/example_cardboard_bin_alone.jpg)
 
-Provided: `datasets/default_dataset/` with 100 images in `images/` and `_annotations.coco.json`, a
+Provided: `datasets/default_dataset/` with the images in `images/` and `_annotations.coco.json`, a
 COCO file with the segmentation polygons of all relevant objects. Every
 annotation carries the same category `object`; the class labels are missing.
 
