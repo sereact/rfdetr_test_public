@@ -1,0 +1,25 @@
+[project]
+name = "hiring-test"
+version = "0.1.0"
+description = "Hiring test: fine-tune an RF-DETR segmentation model (tote / compartment / cardboard_bin)."
+requires-python = ">=3.13"
+dependencies = [
+    "rfdetr==1.5.2",
+    "torch==2.10.0",
+    "torchvision",
+    "pillow",
+    "cvat-sdk==2.11.0",
+]
+
+[tool.uv]
+package = false
+
+# CUDA 12.8 wheels: work on RTX 50xx (Blackwell) and on A100 with driver >= 570
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu128" }
+torchvision = { index = "pytorch-cu128" }

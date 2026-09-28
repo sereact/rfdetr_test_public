@@ -1,0 +1,7 @@
+.venv/
+runs/
+__pycache__/
+*.pth
+*.pt
+.env
+datasets/
