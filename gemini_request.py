@@ -7,6 +7,8 @@ Fill in the INPUT block below, then run:
 The images go first, in the listed order, then the prompt text. The API key is
 read from the GOOGLE_API_KEY environment variable. Standard library only.
 """
+# uv run python -c "from gemini_request import ask; print(ask('Say hello', [], 'gemini-robotics-er-2-preview'))"
+
 import base64
 import json
 import os
@@ -22,7 +24,7 @@ IMAGES = [                      # image files (.jpg / .png / .webp); [] for text
     "path/to/image.jpg",
 ]
 
-MODEL = "gemini-3.7-flash"      # e.g. "gemini-robotics-er-2-preview"
+MODEL = "gemini-robotics-er-2-preview"      # e.g. "gemini-3.7-flash"
 THINKING = None                 # None (model default), "minimal", "low", "medium" or "high"
 # ========================================================================
 
